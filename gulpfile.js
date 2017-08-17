@@ -21,7 +21,7 @@ gulp.task('sass', function() {
 	  	console.log(details.name + ': ' + details.stats.originalSize);
       console.log(details.name + ': ' + details.stats.minifiedSize);
 	  }))
-	  .pipe(gulp.dest('dist/css'));
+	  .pipe(gulp.dest('docs/css'));
 });
 
 /** --- GULP SCRIPTS ---*/
@@ -30,7 +30,7 @@ gulp.task('scripts', function() {
 	  .pipe(concat('all.js'))
 	  .pipe(rename('all.min.js'))
 	  .pipe(uglify())
-	  .pipe(gulp.dest('dist/js'));
+	  .pipe(gulp.dest('docs/js'));
 });
 
 /** --- GULP WATCH ---*/
